@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #003366; /* Dark Blue */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold */
+    text-shadow: 0 0 8px #FFD700;
+}
+
+/* Main Sections */
+section {
+    padding: 100px 20px;
+    color: white;
+    background-color: #003366; /* Dark Blue */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+/* Welcome Section (Interactive) */
+#home {
+    background-color: #002855; /* Slightly darker blue */
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 3.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#home p {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enlarged Profile Picture */
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 5px solid #FFD700;
+}
+
+/* Interactive About Me Section */
+#about {
+    background-color: #002855; /* Slightly darker blue */
+    padding: 120px 20px;
+}
+
+/* Typing Effect for "About Me" Title */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#about h2 {
+    font-size: 3.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    display: inline-block;
+    border-right: 4px solid white;
+    animation: typing 3s steps(15, end) forwards, blink 0.8s infinite;
+}
+
+/* About Me Text - Larger & Centered */
+#about p {
+    font-size: 2rem;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Interactive Skills Section */
+#skills {
+    background-color: #003366; /* Dark Blue */
+}
+
+/* Glowing Effect on Skills Title */
+#skills h2 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 8px white, 0 0 12px #FFD700;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px white, 0 0 12px #FFD700;
+    }
+    to {
+        text-shadow: 0 0 12px #FFD700, 0 0 18px white;
+    }
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 2;
+}
+
+/* Interactive Projects Section */
+#projects {
+    background-color: #002855;
+}
+
+/* Glowing Effect on Projects Title */
+#projects h2 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 8px white, 0 0 12px #FFD700;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Project Styling */
+.project {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 60%;
+    font-size: 1.8rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #003366;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Submit Button */
+button {
+    background-color: #FFD700;
+    color: #003366;
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* Glowing Contact Links */
+#contact a {
+    font-size: 1.6rem;
+    color: #FFD700;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+#contact a:hover {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    font-size: 1.4rem;
+}
